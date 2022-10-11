@@ -6,14 +6,27 @@
     <StackLayout>
         <!--Header-->
         <StackLayout BackgroundColor="#58B0F0" Orientation="Horizontal" Padding="10">
-            <Button Text="Nouveau" FontSize="12" HorizontalOptions="FillAndExpand" BackgroundColor="Transparent" TextColor="#FFF"></Button>
-            <Button Text="Accueil" FontSize="12" HorizontalOptions="FillAndExpand" BackgroundColor="Transparent" TextColor="#FFF"></Button>
-            <Button Text="Rechercher" FontSize="12" HorizontalOptions="FillAndExpand" BackgroundColor="Transparent" TextColor="#FFF"></Button>
+            <ImageButton Source="pencil.png"  WidthRequest="24" HorizontalOptions="StartAndExpand" BackgroundColor="Transparent" ></ImageButton>
+            <Button Text="Accueil" FontSize="12" FontAttributes="Bold" HorizontalOptions="FillAndExpand" BackgroundColor="Transparent" TextColor="#FFF"></Button>
+            <ImageButton Source="search.png" WidthRequest="24" HorizontalOptions="EndAndExpand" BackgroundColor="Transparent"></ImageButton>
         </StackLayout>
 
         <!--Contenu-->
         <StackLayout VerticalOptions="FillAndExpand">
 
+            <!--Form-->
+            <StackLayout>
+                <Label Text="Connexion à Twitter" FontSize="12" HorizontalTextAlignment="Center"></Label>
+                <Entry Placeholder="Identifier Twitter"></Entry>
+                <Entry Placeholder="Mot de passe" IsPassword="True"></Entry>
+                <!--Champ Switch avec label-->
+                <StackLayout Orientation="Horizontal">
+                    <Switch></Switch>
+                    <Label Text="Mémoriser mes informations"></Label>
+                </StackLayout>
+                <Button Text="Se Connecter"></Button>
+            </StackLayout>
+            
             <!--Tweet-->
             <StackLayout Padding="10">
                 
@@ -43,9 +56,9 @@
 
                 <!--Bouton Tweet -->
                 <StackLayout Orientation="Horizontal">
-                    <Button Text="Nouveau" HorizontalOptions="FillAndExpand" BackgroundColor="Transparent" TextColor="#171717" TextTransform="None" FontSize="13"></Button>
-                    <Button Text="Accueil" HorizontalOptions="FillAndExpand" BackgroundColor="Transparent" TextColor="#171717" TextTransform="None" FontSize="13"></Button>
-                    <Button Text="Rechercher" HorizontalOptions="FillAndExpand" BackgroundColor="Transparent" TextColor="#171717" TextTransform="None" FontSize="13"></Button>
+                    <ImageButton Source="reply.png" WidthRequest="22" HorizontalOptions="CenterAndExpand" BackgroundColor="Transparent" ></ImageButton>
+                    <ImageButton Source="retweet.png" WidthRequest="22" HorizontalOptions="CenterAndExpand" BackgroundColor="Transparent" ></ImageButton>
+                    <ImageButton Source="favorite" WidthRequest="22" HorizontalOptions="CenterAndExpand" BackgroundColor="Transparent"></ImageButton>
                 </StackLayout>
             </StackLayout>
             

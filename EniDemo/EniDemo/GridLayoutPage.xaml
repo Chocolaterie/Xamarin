@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="EniDemo.GridLayoutPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Grid>
+                <!--Régle de la grid-->
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="150" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="300" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <!--Ligne 1-->
+                <Label Text="Colonne 1" Grid.Row="0" Grid.Column="0" Background="Red"/>
+                <Label Text="Colonne 2" Grid.Row="0" Grid.Column="1" Background="Red"/>
+
+                <!--Ligne 2-->
+                <Label Text="Colonne 1" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Background="Red"/>
+            </Grid>
+
+            <Label Text="Text"> </Label>
+ 
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

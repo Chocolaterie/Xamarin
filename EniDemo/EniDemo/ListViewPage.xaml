@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="EniDemo.ListViewPage">
+    <ContentPage.Content>
+        <StackLayout>
+
+            <ListView  x:Name="personView" RowHeight="60">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal" HorizontalOptions="Fill" BackgroundColor="Olive">
+                                <Label Text = "{Binding Firstname}"></Label>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+            <Button Clicked="Button_Clicked" Text="Edit Person"></Button>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
