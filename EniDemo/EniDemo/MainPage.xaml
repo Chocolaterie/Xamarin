@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="EniDemo.MainPage">
 
-    <StackLayout>
+    <StackLayout Spacing="0">
         <!--Header-->
         <StackLayout Orientation="Horizontal">
             <Button Text="Home" HorizontalOptions="FillAndExpand"></Button>
@@ -38,4 +38,5 @@
         </StackLayout>
     </StackLayout>
 
+  
 </ContentPage>

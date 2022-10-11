@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="EniDemo.TwitterPage">
+    
+    <StackLayout>
+        <!--Header-->
+        <StackLayout BackgroundColor="#58B0F0" Orientation="Horizontal" Padding="10">
+            <Button Text="Nouveau" FontSize="12" HorizontalOptions="FillAndExpand" BackgroundColor="Transparent" TextColor="#FFF"></Button>
+            <Button Text="Accueil" FontSize="12" HorizontalOptions="FillAndExpand" BackgroundColor="Transparent" TextColor="#FFF"></Button>
+            <Button Text="Rechercher" FontSize="12" HorizontalOptions="FillAndExpand" BackgroundColor="Transparent" TextColor="#FFF"></Button>
+        </StackLayout>
+
+        <!--Contenu-->
+        <StackLayout VerticalOptions="FillAndExpand">
+
+            <!--Tweet-->
+            <StackLayout Padding="10">
+                
+                <!--Contenu du tweet--> 
+                <StackLayout Orientation="Horizontal">
+                    
+                    <!--Block Noir--> 
+                    <StackLayout>
+                        <BoxView BackgroundColor="Black" WidthRequest="75"></BoxView>
+                    </StackLayout>
+                    
+                    <!--Informations-->
+                    <StackLayout>
+                        <!-- Nom Email Temps-->
+                        <StackLayout Orientation="Horizontal">
+                            <Label Text="Pierre@chocolatine.com"></Label>
+                            <Label Text="50s" TextColor="#d6d6d6" HorizontalOptions="EndAndExpand"></Label>
+                        </StackLayout>
+                        
+                        <!--Le Texte-->
+                        <StackLayout>
+                            <Label Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua" TextColor="#262626"></Label>
+                        </StackLayout>
+                        
+                    </StackLayout>
+                </StackLayout>
+
+                <!--Bouton Tweet -->
+                <StackLayout Orientation="Horizontal">
+                    <Button Text="Nouveau" HorizontalOptions="FillAndExpand" BackgroundColor="Transparent" TextColor="#171717" TextTransform="None" FontSize="13"></Button>
+                    <Button Text="Accueil" HorizontalOptions="FillAndExpand" BackgroundColor="Transparent" TextColor="#171717" TextTransform="None" FontSize="13"></Button>
+                    <Button Text="Rechercher" HorizontalOptions="FillAndExpand" BackgroundColor="Transparent" TextColor="#171717" TextTransform="None" FontSize="13"></Button>
+                </StackLayout>
+            </StackLayout>
+            
+        </StackLayout>
+
+        <!--Footer-->
+        <StackLayout HeightRequest="2" Background="#fafafa"></StackLayout>
+        <StackLayout Orientation="Horizontal">
+            <Button Text="Fil" HorizontalOptions="FillAndExpand" TextColor="#63b5f0" BackgroundColor="Transparent" FontSize="12"></Button>
+            <Button Text="Notifications" TextColor="#b6b6b6" HorizontalOptions="FillAndExpand" BackgroundColor="Transparent" FontSize="12"></Button>
+            <Button Text="Messages" TextColor="#b6b6b6" HorizontalOptions="FillAndExpand" BackgroundColor="Transparent" FontSize="12"></Button>
+            <Button Text="Moi" TextColor="#b6b6b6" HorizontalOptions="FillAndExpand" BackgroundColor="Transparent" FontSize="12"></Button>
+        </StackLayout>
+    </StackLayout>
+    
+</ContentPage>
