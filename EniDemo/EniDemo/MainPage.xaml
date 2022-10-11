@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="EniDemo.MainPage">
+
+    <StackLayout>
+        <!--Header-->
+        <StackLayout Orientation="Horizontal">
+            <Button Text="Home" HorizontalOptions="FillAndExpand"></Button>
+            <Button Text="Login" HorizontalOptions="FillAndExpand"></Button>
+        </StackLayout>
+
+        <!--Content-->
+        <StackLayout VerticalOptions="FillAndExpand">
+
+            <!--Titre-->
+            <StackLayout>
+                <Label Text="Titre de l'article" HorizontalTextAlignment="Center" FontSize="26"></Label>
+            </StackLayout>
+
+            <!--Les 3 boutons--> 
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Auteur" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Center"></Label>
+                <Label Text="18/03/2022" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Center"></Label>
+                <Label Text="Actif" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Center"></Label>
+            </StackLayout>
+
+            <!--Le message-->
+            <StackLayout>
+                <Label Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." HorizontalTextAlignment="Center" FontSize="18"></Label>
+            </StackLayout>
+
+        </StackLayout>
+
+        <!--Footer-->
+        <StackLayout HeightRequest="40">
+            <Label Text="Copyright 2020" HorizontalTextAlignment="Center"/>
+        </StackLayout>
+    </StackLayout>
+
+</ContentPage>
