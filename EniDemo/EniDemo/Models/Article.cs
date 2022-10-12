@@ -1,16 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Reflection;
 using System.Text;
 
 namespace EniDemo.Models
 {
-    public class Person
+    public class Article
     {
-        public String Firstname {get; set;}
+        public String Title {get; set; }
 
         public override string ToString()
         {
-            return Firstname;
+            return Title;
         }
     }
 }
