@@ -17,6 +17,8 @@ namespace EniDemo
         {
 
             InitializeComponent();
+
+           
         }
 
         private FormResult validateForm()

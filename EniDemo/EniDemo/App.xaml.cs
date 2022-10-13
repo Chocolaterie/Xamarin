@@ -10,7 +10,7 @@ namespace EniDemo
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            MainPage = new DemoServicePage();
         }
 
         protected override void OnStart()
