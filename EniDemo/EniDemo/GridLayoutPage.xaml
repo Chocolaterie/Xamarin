@@ -24,8 +24,20 @@
                 <Label Text="Colonne 1" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Background="Red"/>
             </Grid>
 
-            <Label Text="Text"> </Label>
- 
+            <ListView x:Name="ListViewPerson" HasUnevenRows="True">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout>
+                                <Label Text="{Binding Firstname}"></Label>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+
+            <Button Text="Ouvrir Page Twitter" Clicked="Button_Clicked"></Button>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

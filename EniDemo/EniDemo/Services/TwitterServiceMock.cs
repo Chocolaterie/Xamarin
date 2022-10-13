@@ -7,7 +7,6 @@ namespace EniDemo.Services
 {
     public class TwitterServiceMock : ITwitterService
     {
-
         public bool authenticate(string email, string password)
         {
             if (email.Equals("pierre-dans-leau@gmail.com") && password == "password")
@@ -23,7 +22,7 @@ namespace EniDemo.Services
 
             for (int i = 0; i < 10; i++)
             {
-                tweets.Add(new Tweet { Author = $"Pierre{i}", Message = $"Message test {i}" })
+                tweets.Add(new Tweet { Author = $"Pierre{i}", Message = $"Message test {i}" });
             }
 
             return tweets;

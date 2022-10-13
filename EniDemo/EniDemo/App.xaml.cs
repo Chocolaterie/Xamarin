@@ -10,7 +10,7 @@ namespace EniDemo
         {
             InitializeComponent();
 
-            MainPage = new TwitterPage();
+            MainPage = new NavigationPage(new GridLayoutPage());
         }
 
         protected override void OnStart()
