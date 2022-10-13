@@ -1,4 +1,5 @@
-﻿using System;
+﻿using EniDemo.Services;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
@@ -13,12 +14,16 @@ namespace EniDemo
     public partial class TwitterPage : ContentPage
     {
 
+        ITwitterService TwitterService { get; set; }
+
         public TwitterPage()
         {
 
             InitializeComponent();
 
-           
+            // Instancier le twitter service mock
+            TwitterService = new TwitterServiceMock();
+
         }
 
         private FormResult validateForm()
@@ -48,12 +53,21 @@ namespace EniDemo
         {
             FormResult formResult = validateForm();
 
-            // Si formulaire valide
+            // Si formulaire valide (contrôle de surface est ok
             if (formResult.Validate())
             {
-                // Caché le formulaire et afficher le tweet
-                this.tweetDiv.IsVisible = true;
-                this.loginForm.IsVisible = false;
+                // Si le contrôle métier est aussi ok
+                if (TwitterService.authenticate(this.emailEntry.Text, this.passwordEntry.Text))
+                {
+                    // Caché le formulaire et afficher le tweet
+                    this.tweetDiv.IsVisible = true;
+                    this.loginForm.IsVisible = false;
+                }
+                else
+                {
+                    this.errorLabel.Text = "Couple email/mot de passe invalide";
+                }
+             
             }
             // Sinon erreur
             else
