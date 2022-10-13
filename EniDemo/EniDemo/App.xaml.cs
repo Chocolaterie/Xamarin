@@ -10,7 +10,7 @@ namespace EniDemo
         {
             InitializeComponent();
 
-            MainPage = new NavigationPage(new GridLayoutPage());
+            MainPage = new NavigationPage(new TestCSharpBalisePage());
         }
 
         protected override void OnStart()

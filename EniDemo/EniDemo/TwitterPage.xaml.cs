@@ -1,4 +1,5 @@
-﻿using EniDemo.Services;
+﻿using EniDemo.Models;
+using EniDemo.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,12 +19,10 @@ namespace EniDemo
 
         public TwitterPage()
         {
-
             InitializeComponent();
 
             // Instancier le twitter service mock
             TwitterService = new TwitterServiceMock();
-
         }
 
         private FormResult validateForm()
@@ -60,8 +59,11 @@ namespace EniDemo
                 if (TwitterService.authenticate(this.emailEntry.Text, this.passwordEntry.Text))
                 {
                     // Caché le formulaire et afficher le tweet
-                    this.tweetDiv.IsVisible = true;
                     this.loginForm.IsVisible = false;
+
+                    // Lier la liste de donnée avec la ListView
+                    this.ListViewPerson.IsVisible = true;
+                    this.ListViewPerson.ItemsSource = TwitterService.getTweets("");
                 }
                 else
                 {

@@ -1,6 +1,7 @@
 ﻿using EniDemo.Models;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace EniDemo.Services
@@ -9,7 +10,18 @@ namespace EniDemo.Services
     {
         public bool authenticate(string email, string password)
         {
-            if (email.Equals("pierre-dans-leau@gmail.com") && password == "password")
+            // Mock persons
+            List<Person> persons = new List<Person>();
+
+            for (int i = 0; i < 4; i++)
+            {
+                persons.Add(new Person { Email = $"Pierre{i}@gmail.com", Password = $"password{i}" });
+            }
+
+            // Recherche Linq
+            Person person = persons.FirstOrDefault(currentPerson => currentPerson.Email == email && currentPerson.Password == password);
+
+            if (person != null)
             {
                 return true;
             }

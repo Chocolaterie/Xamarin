@@ -30,43 +30,50 @@
             </StackLayout>
             
             <!--Tweet-->
-            <StackLayout x:Name="tweetDiv" Padding="10" IsVisible="False">
-                
-                <!--Contenu du tweet--> 
-                <StackLayout Orientation="Horizontal">
-                    
-                    <!--Block Noir--> 
-                    <StackLayout>
-                        <BoxView BackgroundColor="Black" WidthRequest="75"></BoxView>
-                    </StackLayout>
-                    
-                    <!--Informations-->
-                    <StackLayout>
-                        <!-- Nom Email Temps-->
-                        <StackLayout Orientation="Horizontal">
-                            <Label Text="Pierre@chocolatine.com"></Label>
-                            <Label Text="50s" TextColor="#d6d6d6" HorizontalOptions="EndAndExpand"></Label>
-                        </StackLayout>
-                        
-                        <!--Le Texte-->
-                        <StackLayout>
-                            <Label Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua" TextColor="#262626"></Label>
-                        </StackLayout>
-                        
-                    </StackLayout>
-                </StackLayout>
+            <ListView x:Name="ListViewPerson" HasUnevenRows="True" IsVisible="False">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Padding="10">
+                                <!--Contenu du tweet-->
+                                <StackLayout Orientation="Horizontal">
 
-                <!--Bouton Tweet -->
-                <StackLayout Orientation="Horizontal">
-                    <ImageButton Source="reply.png" WidthRequest="22" HorizontalOptions="CenterAndExpand" BackgroundColor="Transparent" ></ImageButton>
-                    <ImageButton Source="retweet.png" WidthRequest="22" HorizontalOptions="CenterAndExpand" BackgroundColor="Transparent" ></ImageButton>
-                    <ImageButton Source="favorite" WidthRequest="22" HorizontalOptions="CenterAndExpand" BackgroundColor="Transparent"></ImageButton>
-                </StackLayout>
-            </StackLayout>
+                                    <!--Block Noir-->
+                                    <StackLayout>
+                                        <BoxView BackgroundColor="Black" WidthRequest="75"></BoxView>
+                                    </StackLayout>
 
+                                    <!--Informations-->
+                                    <StackLayout>
+                                        <!-- Nom Email Temps-->
+                                        <StackLayout Orientation="Horizontal">
+                                            <Label Text="{ Binding Author }"></Label>
+                                            <Label Text="50s" TextColor="#d6d6d6" HorizontalOptions="EndAndExpand"></Label>
+                                        </StackLayout>
 
+                                        <!--Le Texte-->
+                                        <StackLayout>
+                                            <Label Text="{ Binding Message }" TextColor="#262626"></Label>
+                                        </StackLayout>
+                                    </StackLayout>
+                                    
+                                </StackLayout>
+
+                                <!--Bouton Tweet -->
+                                <StackLayout Orientation="Horizontal">
+                                    <ImageButton Source="reply.png" WidthRequest="22" HorizontalOptions="CenterAndExpand" BackgroundColor="Transparent" ></ImageButton>
+                                    <ImageButton Source="retweet.png" WidthRequest="22" HorizontalOptions="CenterAndExpand" BackgroundColor="Transparent" ></ImageButton>
+                                    <ImageButton Source="favorite" WidthRequest="22" HorizontalOptions="CenterAndExpand" BackgroundColor="Transparent"></ImageButton>
+                                </StackLayout>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            
         </StackLayout>
-
+     
+        
         <!--Footer-->
         <StackLayout HeightRequest="2" Background="#fafafa"></StackLayout>
         <StackLayout Orientation="Horizontal">
