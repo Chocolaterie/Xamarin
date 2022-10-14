@@ -3,6 +3,12 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="EniDemo.App">
     <Application.Resources>
-
+        <Color x:Key="ColorError">#FF0000</Color>
+        
+        <Style x:Key="FooterButton" TargetType="Button">
+            <Setter Property="BackgroundColor" Value="Transparent" />
+            <Setter Property="FontSize" Value="12" />
+            <Setter Property="TextColor" Value="#b6b6b6" />
+        </Style>
     </Application.Resources>
 </Application>

@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:EniDemo;assembly=EniDemo"
              x:Class="EniDemo.TwitterPage">
-    
+
     <StackLayout>
         <!--Header-->
         <StackLayout BackgroundColor="#58B0F0" Orientation="Horizontal" Padding="10">
@@ -18,14 +18,26 @@
             <!--Form-->
             <StackLayout x:Name="loginForm">
                 <Label Text="Connexion à Twitter" FontSize="12" HorizontalTextAlignment="Center"></Label>
-                <Entry x:Name="emailEntry" Placeholder="Identifier Twitter"></Entry>
-                <Entry x:Name="passwordEntry" Placeholder="Mot de passe" IsPassword="True"></Entry>
+                <Entry x:Name="emailEntry" Text="Pierre0@gmail.com" Placeholder="Identifier Twitter"></Entry>
+                <Entry x:Name="passwordEntry" Text="password0"  Placeholder="Mot de passe" IsPassword="True"></Entry>
                 <!--Champ Switch avec label-->
                 <StackLayout Orientation="Horizontal">
                     <Switch></Switch>
                     <Label Text="Mémoriser mes informations"></Label>
                 </StackLayout>
-                <Label x:Name="errorLabel" Text="" TextColor="#FF0000"></Label>
+                
+                <Label x:Name="errorLabel" Text="" TextColor="{StaticResource ColorError}">
+                    <Label.FontSize>
+                        <OnPlatform x:TypeArguments="x:Double">
+                            <OnPlatform.Platforms>
+                                <On Platform="Android" Value="12" />
+                                <On Platform="iOS" Value="24" />
+                                <On Platform="UWP" Value="15" />
+                            </OnPlatform.Platforms>
+                        </OnPlatform>
+                    </Label.FontSize>
+                </Label>
+                
                 <Button Text="Se Connecter" Clicked="Button_Clicked"></Button>
             </StackLayout>
             
@@ -77,10 +89,10 @@
         <!--Footer-->
         <StackLayout HeightRequest="2" Background="#fafafa"></StackLayout>
         <StackLayout Orientation="Horizontal">
-            <Button Text="Fil" HorizontalOptions="FillAndExpand" TextColor="#63b5f0" BackgroundColor="Transparent" FontSize="12"></Button>
-            <Button Text="Notifications" TextColor="#b6b6b6" HorizontalOptions="FillAndExpand" BackgroundColor="Transparent" FontSize="12"></Button>
-            <Button Text="Messages" TextColor="#b6b6b6" HorizontalOptions="FillAndExpand" BackgroundColor="Transparent" FontSize="12"></Button>
-            <Button Text="Moi" TextColor="#b6b6b6" HorizontalOptions="FillAndExpand" BackgroundColor="Transparent" FontSize="12"></Button>
+            <Button Text="Fil" HorizontalOptions="FillAndExpand" TextColor="#63b5f0" Style="{StaticResource FooterButton}"></Button>
+            <Button Text="Notifications" HorizontalOptions="FillAndExpand" Style="{StaticResource FooterButton}"></Button>
+            <Button Text="Messages" HorizontalOptions="FillAndExpand" Style="{StaticResource FooterButton}" ></Button>
+            <Button Text="Moi" HorizontalOptions="FillAndExpand" Style="{StaticResource FooterButton}"></Button>
         </StackLayout>
     </StackLayout>
     
